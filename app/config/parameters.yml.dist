@@ -17,3 +17,10 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+    images_directory: '%kernel.project_dir%/web/uploads/posts/images'
+    redis_address: 'localhost'
+
+    mq_user: guest
+    mq_password: guest
+    mq_port: 5672
+    mq_host: localhost

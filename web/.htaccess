@@ -55,6 +55,10 @@ DirectoryIndex app.php
 
     # Rewrite all other queries to the front controller.
     RewriteRule ^ %{ENV:BASE}/app.php [L]
+    # Rewrite all other queries except mediafiles to the front controller.
+#    RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.jpeg|\.bmp|\.mp4|\.flv|\.swf|\.webm|\.ogv|\.css)$
+#    RewriteRule .? %{ENV:BASE}/app.php [L]
+
 </IfModule>
 
 <IfModule !mod_rewrite.c>
